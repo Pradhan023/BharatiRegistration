@@ -2,7 +2,7 @@ const alluserData = require('../Model/model')
 const bcrypt = require("bcrypt")
 
 const regController = async(req,res)=>{
-    const {data} = req.body;
+    const data = req.body;
     console.log(data);
     const dbCheck = await alluserData.findOne({email:data.email})
     console.log(dbCheck);
